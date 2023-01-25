@@ -27,8 +27,6 @@ const createNewStudent = async (req, res) => {
     const { name, age, birthdate, email } = req.body;
     const studentEmail = email || null;
 
-    console.log("req.body", req.body);
-
     if (!name) {
       throw Error(
         "Name should not be empty! what would I call you then if you have no name? Geez"

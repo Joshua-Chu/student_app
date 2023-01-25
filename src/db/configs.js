@@ -1,9 +1,9 @@
 const CONFIGS = {
-  user: process.env.POSTGRES_USER,
-  database: process.env.POSTGRES_DB,
-  password: process.env.POSTGRES_PASSWORD,
-  port: process.env.POSTGRES_PORT,
-  host: process.env.POSTGRES_HOST,
+  user: process.env.PGUSER,
+  database: process.env.PGDATABASE,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
+  host: process.env.PGHOST,
 };
 
 module.exports = {

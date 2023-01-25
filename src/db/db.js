@@ -1,8 +1,6 @@
 const Pool = require("pg").Pool;
 const CONFIGS = require("./configs").CONFIGS;
 
-console.log("CONFIGS", CONFIGS);
-
 const pool = new Pool({
   user: CONFIGS.user,
   host: CONFIGS.host,
