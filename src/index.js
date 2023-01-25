@@ -1,12 +1,16 @@
 const express = require("express");
 const swaggerDocs = require("./utils/swagger.js");
 
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config({ path: "src/.env" });
+}
+
 //routes
 const studentRouter = require("./routes/studentRoutes.js");
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 app.use(
   express.urlencoded({
@@ -19,8 +23,6 @@ app.use(express.json());
 app.use("/students", studentRouter);
 
 app.listen(PORT, () => {
-  console.log(
-    "Server is now up and running, listening to http://localhost:3000"
-  );
-  swaggerDocs(app, PORT);
+  console.log(`Server is now up and running, listening to ${PORT}`);
+  swaggerDocs(app);
 });
