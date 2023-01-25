@@ -38,7 +38,7 @@ const createNewStudent = async (req, res) => {
       [name, age, birthdate, studentEmail]
     );
 
-    res.json(new { data: newStudent.rows[0] }());
+    res.json({ data: newStudent.rows[0] });
   } catch (error) {
     errorHandler(error, res);
   }
