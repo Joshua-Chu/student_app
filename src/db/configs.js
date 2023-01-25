@@ -4,6 +4,7 @@ const CONFIGS = {
   password: process.env.PGPASSWORD,
   port: process.env.PGPORT,
   host: process.env.PGHOST,
+  connectionString: process.env.PGURI,
 };
 
 module.exports = {
